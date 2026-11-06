@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descargar Nuvora Sync</title>
+  <meta name="description" content="Nuvora Sync: sincroniza carpetas directamente entre tus dispositivos y los de tus amigos, con copias cifradas. Android, Mac y Windows.">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <style>
+    :root { --fondo: #F4F6FC; --superficie: #fff; --texto: #1C2033; --muted: #5D6479; --linea: #E1E5F0; --primario: #6A3DE8; --suave: #EFE9FF; color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --fondo: #10131C; --superficie: #191D29; --texto: #E8EBF4; --muted: #9AA1B7; --linea: #2A3043; --primario: #A88BFF; --suave: #2A2440; color-scheme: dark; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--fondo); color: var(--texto); }
+    a { color: var(--primario); }
+    .hero { padding: 64px 20px 54px; text-align: center; background:
+      radial-gradient(circle at 12% 0%, #FFC9A390, transparent 45%), radial-gradient(circle at 90% 100%, #A9EBCB90, transparent 45%); }
+    .hero img { width: 112px; height: 112px; filter: drop-shadow(0 12px 28px rgb(106 61 232 / .25)); }
+    h1 { font-size: clamp(34px, 6vw, 52px); margin: 14px 0 8px; letter-spacing: -.02em; }
+    .lema { font-size: 19px; color: var(--muted); max-width: 640px; margin: 0 auto; }
+    .principal { display: inline-flex; align-items: center; gap: 10px; margin-top: 26px; padding: 14px 26px; border-radius: 999px; background: var(--primario);
+      color: #fff; font-weight: 700; text-decoration: none; font-size: 17px; box-shadow: 0 10px 26px rgb(106 61 232 / .3); }
+    .principal small { font-weight: 500; opacity: .85; }
+    .version { color: var(--muted); font-size: 14px; margin-top: 12px; }
+    main { max-width: 1040px; margin: 0 auto; padding: 0 20px 60px; }
+    h2 { font-size: 26px; margin: 44px 0 6px; }
+    .sub { color: var(--muted); margin: 0 0 18px; }
+    .rejilla { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+    .app { background: var(--superficie); border: 1px solid var(--linea); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .app.tuya { border-color: var(--primario); box-shadow: 0 0 0 3px var(--suave); }
+    .app .so { font-size: 30px; }
+    .app h3 { margin: 0; font-size: 18px; }
+    .app p { margin: 0; color: var(--muted); font-size: 14px; flex: 1; }
+    .app a.boton { display: block; text-align: center; padding: 10px; border-radius: 12px; background: var(--suave); font-weight: 700; text-decoration: none; }
+    .app.tuya a.boton { background: var(--primario); color: #fff; }
+    .etq { display: inline-block; font-size: 12px; font-weight: 700; color: var(--primario); background: var(--suave); padding: 2px 8px; border-radius: 999px; }
+    .servidor { margin-top: 18px; background: linear-gradient(115deg, #1B2147, #3B4FC4 60%, #5B2E8C); color: #fff; border-radius: 24px; padding: 28px; display: grid; gap: 18px; grid-template-columns: 120px 1fr; align-items: center; }
+    .servidor img { width: 110px; height: 110px; }
+    .servidor p { margin: 6px 0 14px; opacity: .85; }
+    .servidor .botones { display: flex; flex-wrap: wrap; gap: 10px; }
+    .servidor .botones a { color: #1B2147; background: #fff; padding: 9px 16px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 14px; }
+    .servidor .botones a.otro { background: rgb(255 255 255 / .14); color: #fff; }
+    @media (max-width: 640px) { .servidor { grid-template-columns: 1fr; text-align: center; } .servidor img { margin: 0 auto; } .servidor .botones { justify-content: center; } }
+    .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; counter-reset: paso; }
+    .paso { background: var(--superficie); border: 1px solid var(--linea); border-radius: 18px; padding: 18px; }
+    .paso::before { counter-increment: paso; content: counter(paso); display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--primario); color: #fff; font-weight: 800; margin-bottom: 8px; }
+    .paso b { display: block; margin-bottom: 4px; }
+    .paso span { color: var(--muted); font-size: 14px; }
+    details { background: var(--superficie); border: 1px solid var(--linea); border-radius: 14px; padding: 12px 16px; margin-top: 10px; }
+    summary { cursor: pointer; font-weight: 600; }
+    details p { color: var(--muted); font-size: 14.5px; margin: 8px 0 2px; }
+    footer { text-align: center; color: var(--muted); font-size: 14px; padding: 30px 20px; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="icono.svg" alt="">
+    <h1>Nuvora Sync</h1>
+    <p class="lema">Sincroniza carpetas directamente entre tus dispositivos y los de tus amigos: sin nube, sin límites y con copias cifradas. Como Resilio Sync, pero libre y con Syncthing.</p>
+    <a class="principal" id="principal" href="#descargas">Descargar <small id="principal-so"></small></a>
+    <p class="version" id="version">Gratis · Android, Mac y Windows</p>
+  </header>
+
+  <main>
+    <section id="descargas">
+      <h2>Descargar</h2>
+      <p class="sub">Entra con tu cuenta de Google en cada dispositivo y se encuentran solos.</p>
+      <div class="rejilla">
+        <div class="app" data-so="android"><span class="so">📱</span><h3>Android</h3><p>Cualquier carpeta del móvil, en segundo plano, con wifi o datos móviles.</p><a class="boton" data-archivo="Nuvora-Sync.apk">Descargar APK</a></div>
+        <div class="app" data-so="mac-arm"><span class="so">💻</span><h3>Mac con Apple Silicon</h3><p>Chip M1, M2, M3, M4… <span class="etq">macOS 11+</span></p><a class="boton" data-archivo="Nuvora-Sync-Mac-AppleSilicon.dmg">Descargar .dmg</a></div>
+        <div class="app" data-so="mac-intel"><span class="so">💻</span><h3>Mac con Intel</h3><p>Procesador Intel <span class="etq">macOS 11+</span></p><a class="boton" data-archivo="Nuvora-Sync-Mac-Intel.dmg">Descargar .dmg</a></div>
+        <div class="app" data-so="windows"><span class="so">🖥️</span><h3>Windows 10 y 11</h3><p>Instalador sin permisos de administrador. Se actualiza solo.</p><a class="boton" data-archivo="Nuvora-Sync-Windows.exe">Descargar instalador</a></div>
+      </div>
+    </section>
+
+    <h2>Cada carpeta, como tú quieras</h2>
+    <div class="rejilla">
+      <div class="app"><span class="so">🔄</span><h3>Enviar y recibir</h3><p>Los cambios viajan en los dos sentidos entre todos los dispositivos.</p></div>
+      <div class="app"><span class="so">⬆️</span><h3>Solo enviar</h3><p>Este dispositivo manda: ideal para las fotos del móvil o una copia de trabajo.</p></div>
+      <div class="app"><span class="so">⬇️</span><h3>Solo recibir</h3><p>Una copia que se mantiene al día; lo que cambies ahí no se envía.</p></div>
+      <div class="app"><span class="so">🔒</span><h3>Copia cifrada</h3><p>Guarda tu carpeta en el dispositivo de un amigo o en un ordenador que no es tuyo: no puede leerla.</p></div>
+    </div>
+
+    <h2>Así se empieza</h2>
+    <div class="pasos">
+      <div class="paso"><b>Instala Nuvora Sync</b><span>En el móvil y en tus ordenadores, y entra con la misma cuenta de Google.</span></div>
+      <div class="paso"><b>Añade una carpeta</b><span>Elige con qué dispositivos se sincroniza y de qué forma.</span></div>
+      <div class="paso"><b>Comparte con amigos</b><span>Búscalos por su correo; vuestros amigos de Nuvora Drive son los mismos.</span></div>
+    </div>
+
+    <h2>Preguntas</h2>
+    <details><summary>¿Qué Mac tengo?</summary><p>Menú  → Acerca de este Mac. Si pone «Chip Apple M…», es Apple Silicon. Si pone «Procesador Intel…», es Intel.</p></details>
+    <details><summary>El Mac dice que no puede abrir la app</summary><p>Va firmada sin certificado de pago de Apple. La primera vez: clic derecho sobre la app → Abrir, o Ajustes del Sistema → Privacidad y seguridad → Abrir igualmente.</p></details>
+    <details><summary>Android no deja instalar la APK</summary><p>Permite «Instalar apps desconocidas» para el navegador con el que la descargaste. Las siguientes versiones se instalan desde la propia app.</p></details>
+    <details><summary>¿Pasan mis archivos por algún servidor?</summary><p>No. Viajan directamente de un dispositivo a otro, cifrados (TLS), en la misma wifi o por internet. Google solo sirve para que tus dispositivos y amigos se encuentren.</p></details>
+    <details><summary>¿Funciona con datos móviles?</summary><p>Sí. Si lo prefieres, en Android puedes darle permiso para no ahorrar batería y que sincronice siempre en segundo plano.</p></details>
+    <details><summary>¿Y una nube con web, enlaces y editores?</summary><p>Para eso está <a href="https://guillermorc-gain.github.io/Nuvora/">Nuvora Drive</a>, con su propio servidor en tu casa.</p></details>
+  </main>
+  <footer>Nuvora Sync · <a href="https://github.com/guillermorc-gain/Nuvora-Sync-descargas/releases">Todas las versiones</a> · <a href="https://guillermorc-gain.github.io/Nuvora/">Nuvora Drive</a></footer>
+
+  <script>
+    // Las descargas están en el repositorio público Nuvora-Sync-descargas (el código es privado)
+    const REPO = 'guillermorc-gain/Nuvora-Sync-descargas';
+    // Por el servicio de actualizaciones de Manager Dev: descarga aunque los repositorios sean privados
+    const base = 'https://manager-dev-actualizaciones.vercel.app/d/Nuvora-Sync-descargas/ultima/';
+    document.querySelectorAll('[data-archivo]').forEach((a) => { a.href = base + a.dataset.archivo; });
+    // Se destaca la descarga de este dispositivo
+    const ua = navigator.userAgent;
+    let so = /Android/i.test(ua) ? 'android' : /Windows/i.test(ua) ? 'windows' : /Macintosh|Mac OS X/i.test(ua) ? 'mac' : '';
+    (async () => {
+      if (so === 'mac') {
+        so = 'mac-arm';
+        try {
+          const d = await navigator.userAgentData?.getHighEntropyValues(['architecture']);
+          if (d && d.architecture === 'x86') so = 'mac-intel';
+        } catch { /* Safari no lo dice: Apple Silicon, lo más común */ }
+      }
+      const tarjeta = document.querySelector(`.app[data-so="${so}"]`);
+      if (tarjeta) {
+        tarjeta.classList.add('tuya');
+        const a = tarjeta.querySelector('a');
+        document.getElementById('principal').href = a.href;
+        document.getElementById('principal-so').textContent = 'para ' + tarjeta.querySelector('h3').textContent;
+      }
+      try {
+        let r = await (await fetch('https://manager-dev-actualizaciones.vercel.app/v/Nuvora-Sync-descargas')).json().catch(() => ({}));
+        if (r.tag) r = { tag_name: r.tag };
+        if (!r.tag_name) r = await (await fetch(`https://api.github.com/repos/${REPO}/releases/latest`)).json();
+        if (!r.tag_name) r = await (await fetch('https://api.github.com/repos/guillermorc-gain/Nuvora-Sync/releases/latest')).json();
+        if (r.tag_name) document.getElementById('version').textContent = `Versión ${r.tag_name.replace(/^v/, '')} · Gratis · Android, Mac y Windows`;
+      } catch { /* sin conexión con GitHub */ }
+    })();
+  </script>
+</body>
+</html>
